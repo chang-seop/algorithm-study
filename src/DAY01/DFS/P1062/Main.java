@@ -10,7 +10,6 @@ public class Main {
     static boolean[] visited;
     static int selectedCount = 0;
     static int max = Integer.MIN_VALUE;
-
     public static void main(String[] args) throws FileNotFoundException {
         System.setIn(new FileInputStream("src/DAY01/DFS/P1062/input.txt"));
         Scanner sc = new Scanner(System.in);
