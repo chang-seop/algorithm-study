@@ -21,17 +21,20 @@ public class Main {
         long target = 0;
         long high = X, low = 0, mid = 0;
         long result = 0;
-        while(low <= high) {
-            mid = (high + low) / 2;
-            target = 100 * (Y + mid) / (X + mid);
-            if(target > compare) {
-                result = mid;
-                high = mid - 1;
-            } else {
-                low = mid + 1;
+        if(compare == 99) System.out.println(-1);
+        else {
+            while(low < high) {
+                mid = (high + low) / 2;
+                target = 100 * (Y + mid) / (X + mid);
+                //target이 큰 경우
+                if(target == compare) {// mid가 필요하면 살려야 된다.
+                    low = mid + 1;
+                }
+                else {
+                    high = mid;
+                }
             }
+            System.out.println(high);
         }
-        if(result == 0) System.out.println(-1);
-        else System.out.println(result);
     }
 }
