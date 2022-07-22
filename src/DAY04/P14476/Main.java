@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-//누적 gcd
+//누적 gcd (최소 공배수)
 public class Main {
     static int N;
     static int[] nums;

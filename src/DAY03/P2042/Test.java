@@ -3,7 +3,7 @@ package DAY03.P2042;
 import java.io.*;
 import java.util.StringTokenizer;
 
-// 인덱스 트리
+// Index Tree
 public class Test {
     static long[] nums;
     static long[] tree;

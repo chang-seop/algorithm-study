@@ -1,4 +1,4 @@
-package DAY04.P9202;
+package DAY03.P9202;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -18,7 +18,7 @@ public class Main {
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/DAY04/P9202/input.txt"));
+        System.setIn(new FileInputStream("src/DAY03/P9202/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         Trie trie = new Trie();

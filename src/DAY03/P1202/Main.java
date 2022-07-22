@@ -3,7 +3,7 @@ package DAY03.P1202;
 import java.io.*;
 import java.util.*;
 
-// 우선 순위 큐를 이용
+// 우선 순위 큐를 이용, 두 배열을 정렬 후 2 Pointer 로
 public class Main {
     static int K, N;
     static PriorityQueue<Jewel> pq;
@@ -44,7 +44,7 @@ public class Main {
         long result = 0;
         // 1. 남은 가방 중 제일 작은 가방을 선택. <- 정렬
         for (int i = 0; i < backpacks.length; i++) {
-            // 2. 선택된 가방에 넣을 수 있는 남은 보석 중 가장 비싼 보석을 선택. <- 힙을 사용.
+            // 2. 선택된 가방에 넣을 수 있는 남은 보석 중 가장 비싼 보석을 선택. <- 힙을 사용.(우선순위 큐)
             while(jIndex < N && jewels[jIndex].weight <= backpacks[i]) {
                 pq.add(jewels[jIndex++]);
             }

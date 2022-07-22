@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+// 최소 힙 (이진 트리)
 public class Main {
     static int N;
 

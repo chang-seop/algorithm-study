@@ -3,6 +3,7 @@ package DAY03.P2243;
 import java.io.*;
 import java.util.StringTokenizer;
 
+// Index Tree 활용 문제
 public class Main {
     static int N, M;
     static int A, B, C, S;

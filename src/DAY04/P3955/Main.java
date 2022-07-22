@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+//확장형 유클리드 호제법
 public class Main {
     static int N, A, B;
     public static void main(String[] args) throws IOException {

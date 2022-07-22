@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
+// 최대 힙 (이진 트리)
 public class Main {
     static PriorityQueue<Integer> pq;
     public static void main(String[] args) throws IOException {
