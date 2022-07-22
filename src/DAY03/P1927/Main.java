@@ -8,17 +8,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-    static List<Integer> list;
+    static int N;
+
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("src/DAY03/P1927/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int N = Integer.parseInt(br.readLine());
+        N = Integer.parseInt(br.readLine());
         MinHeap mh = new MinHeap();
 
-        for (int n = 0, a; n < N; n++)  {
+        for (int n = 0, a; n < N; n++) {
             int input = Integer.parseInt(br.readLine());
-            if(input == 0) System.out.println(mh.delete());
-            else mh.insert(input);
+            if (input == 0) {
+                System.out.println(mh.delete());
+            } else {
+                mh.insert(input);
+            }
         }
     }
 }
@@ -39,11 +43,12 @@ class MinHeap {
         int current = list.size() - 1;
         int parent = current / 2;
         while (true) {
-            //부모가 0이거나 부모가 자기 꺼보다 작거나 같으면 탈출조건
+            //부모가 0이거나 부모가 자기 꺼보다 작거나 같으면 탈출조건 (최소 힙)
             if(parent == 0 || list.get(parent) <= list.get(current)) {
                 break;
             }
-            int temp = list.get(current);
+            //swap
+            int temp = list.get(parent);
             list.set(parent, list.get(current));
             list.set(current, temp);
 
@@ -75,7 +80,8 @@ class MinHeap {
             int minPos = leftPos;
 
             // 오른쪽 자식 확인
-            if(rightPos < list.size() && minValue > list.get(rightPos)) { //최소 힙 이므로
+            // minValue 가 오른쪽 노드의 값보다 클 때 오른쪽 노드의 정보를 minValue, minPos 저장 (최소 힙)
+            if(rightPos < list.size() && minValue > list.get(rightPos)) {
                 minValue = list.get(rightPos);
                 minPos = rightPos;
             }
@@ -84,9 +90,8 @@ class MinHeap {
                 int temp = list.get(currentPos);
                 list.set(currentPos, minValue);
                 list.set(minPos, temp);
-
-                currentPos = minPos;
             }
+            currentPos = minPos; // 필수 !!
         }
         return top;
     }

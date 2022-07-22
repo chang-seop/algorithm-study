@@ -1,9 +1,9 @@
 package DAY03.P1202;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.util.*;
 
+// 우선 순위 큐를 이용
 public class Main {
     static int K, N;
     static PriorityQueue<Jewel> pq;
