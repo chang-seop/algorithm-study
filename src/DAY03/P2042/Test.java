@@ -26,6 +26,27 @@ public class Test {
             S *= 2; // n^2
         }
         tree = new long[2 * S]; // 더미를 생각 해야 돼서 + 1 안함 ( index 0 )
+        initBUTP();
+
+        for (int i = 0; i < M * K; i++) {
+            int a, b, c2;
+            long c1;
+            st = new StringTokenizer(br.readLine());
+
+            a = Integer.parseInt(st.nextToken());
+            b = Integer.parseInt(st.nextToken());
+
+            if (a == 1) {
+                // update
+                c1 = Long.parseLong(st.nextToken());
+                updateBU(b, c1);
+            } else if (a == 2) {
+                // query
+                c2 = Integer.parseInt(st.nextToken());
+                System.out.println(query(0, S, 1, b, c2));
+            }
+        }
+
     }
 
     //BU -> Button Up init || TP -> Top Down init

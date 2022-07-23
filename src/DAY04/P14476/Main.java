@@ -13,7 +13,7 @@ public class Main {
     static int[] gcdLtoR;
     static int[] gcdRtoL;
     public static void main(String[] args) throws IOException {
-        //System.setIn(new FileInputStream("src/DAY04/P14476/input.txt"));
+        System.setIn(new FileInputStream("src/DAY04/P14476/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         int N = Integer.parseInt(br.readLine());
@@ -33,13 +33,13 @@ public class Main {
             gcdLtoR[i] = gcd(gcdLtoR[i - 1], nums[i]);
         }
         //RtoL 만들기
-        gcdLtoR[0] = nums[0];
+        gcdRtoL[N - 1] = nums[N - 1];
         for (int i = N - 2; i >= 0; i--) {
             gcdRtoL[i] = gcd(gcdRtoL[i + 1], nums[i]);
         }
 
         //k 선정하기
-        int max = 0;
+        int max = -1;
         int maxIndex = 0;
         for (int i = 0; i < N; i++) {
             int gcd = 0;
@@ -63,11 +63,16 @@ public class Main {
         if(max == 0) {
             System.out.println(-1);
         } else {
-            System.out.println(max + " " + maxIndex);
+            System.out.println(max + " " + nums[maxIndex]);
         }
     }
     //gcd(a, b) == gcd(b, r) == gcd(b, a % b), stop when a % b == 0
     static int gcd(int a, int b) {
-        return gcd(a, a % b);
+        while(b != 0) {
+            int r = a % b;
+            a = b;
+            b = r;
+        }
+        return a;
     }
 }

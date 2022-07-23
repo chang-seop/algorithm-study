@@ -7,19 +7,21 @@ import java.util.StringTokenizer;
 public class Main {
     static int N, M;
     static int A, B, C, S;
+    static int MAX = 1000000;
     static int[] tree;
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("src/DAY03/P2243/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
-        N = Integer.parseInt(br.readLine());
 
+        //init
         S = 1;
-        while(S < N) {
+        while(S < MAX) {
             S *= 2;
         }
-        tree = new int[S];
+        tree = new int[2 * S];
+        N = Integer.parseInt(br.readLine());
 
+        StringTokenizer st;
         for (int n = 0; n < N; n++) {
             st = new StringTokenizer(br.readLine());
             A = Integer.parseInt(st.nextToken());
@@ -30,7 +32,8 @@ public class Main {
             } else if(A == 1) {
                 B = Integer.parseInt(st.nextToken());
                 int index = query(1, S, 1, B);
-                update(1, S, 1, index, index -1);
+                update(1, S, 1, index, -1);
+                System.out.println(index);
             }
         }
     }
