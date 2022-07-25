@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// 피보나치 함수 (다이나믹 프로그래밍)
 public class Main {
     static int T, zero, one;
     static int[] intArray;
