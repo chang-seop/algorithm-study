@@ -76,7 +76,7 @@ public class Main {
         return a;
     }
 
-    static void search(int y, int x, TrieNode node) {
+    static void search(int y, int x, TrieNode node) { // dfs
         // 1. 체크인 -> visited
         visited[y][x] = true;
         sb.append(map[y][x]); // 문자 추가
