@@ -10,7 +10,7 @@ public class Main {
     static StringBuilder sb;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/P11653/input.txt"));
+        System.setIn(new FileInputStream("src/WorkingTable/P11653/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         sb = new StringBuilder();
 
