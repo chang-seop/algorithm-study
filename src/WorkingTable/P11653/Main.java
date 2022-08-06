@@ -15,5 +15,17 @@ public class Main {
         sb = new StringBuilder();
 
         N = Integer.parseInt(br.readLine());
+
+        int temp = N;
+        int i = 2;
+        while(true) {
+            if(temp == 0 || i > Math.sqrt(N)) break;
+            else if(temp % i == 0) {
+                System.out.println(i);
+                temp /= i;
+                i = 1;
+            }
+            i++;
+        }
     }
 }
