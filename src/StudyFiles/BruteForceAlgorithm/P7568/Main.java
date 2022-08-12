@@ -1,4 +1,4 @@
-package WorkingTable.P7568;
+package StudyFiles.BruteForceAlgorithm.P7568;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class Main {
     static int[] ranks;
     static int[] answer;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/WorkingTable/P7568/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/BruteForceAlgorithm/P7568/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 

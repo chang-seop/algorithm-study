@@ -1,4 +1,4 @@
-package WorkingTable.P15651;
+package StudyFiles.BackTracking.P15651;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -11,7 +11,7 @@ public class Main {
     static StringBuilder sb = new StringBuilder();
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/WorkingTable/P15651/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/BackTracking/P15651/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
