@@ -1,4 +1,4 @@
-package WorkingTable.P1620;
+package StudyFiles.SetsAndMaps.P1620;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ import java.util.StringTokenizer;
 public class Main {
     static int N, test;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/WorkingTable/P1620/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/SetsAndMaps/P1620/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         StringBuilder sb = new StringBuilder();
@@ -29,6 +29,7 @@ public class Main {
 
         for (int i = 0; i < test; i++) {
             String temp = br.readLine();
+            //스트링이 정수인지 단어인지 확인하는 String.matches 함수
             if(!temp.matches("[+-]?\\d*(\\.\\d+)?")) sb.append(hashMap2.get(temp)).append("\n");
             else sb.append(hashMap1.get(Integer.parseInt(temp))).append("\n");
         }
