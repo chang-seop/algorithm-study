@@ -5,6 +5,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -16,17 +17,16 @@ public class Main {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
-        HashMap<Integer, String> hashMap = new HashMap<>();
+        HashSet<String> hashSet = new HashSet<>();
         for (int i = 1; i <= N; i++) {
-            hashMap.put(i, br.readLine());
+            hashSet.add(br.readLine());
         }
 
         int count = 0;
         for (int i = 0; i < M; i++) {
             String temp = br.readLine();
-
-            for(String a : hashMap.values()) {
-                if(temp.equals(a)) count++;
+            if(hashSet.contains(temp)) {
+                count++;
             }
         }
         System.out.println(count);

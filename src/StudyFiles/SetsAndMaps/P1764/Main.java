@@ -17,17 +17,17 @@ public class Main {
         N = Integer.parseInt(st.nextToken());
         M = Integer.parseInt(st.nextToken());
 
-        HashMap<String, Integer> hashMap = new HashMap<>();
+        HashSet<String> hashSet = new HashSet<>();
         answerList = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            hashMap.put(br.readLine(), i);
+            hashSet.add(br.readLine());
         }
 
         int count = 0;
         for (int i = 0; i < M; i++) {
             String temp = br.readLine();
-            if(hashMap.containsKey(temp)) {
+            if(hashSet.contains(temp)) {
                 answerList.add(temp);
                 count++;
             }
@@ -37,8 +37,8 @@ public class Main {
         Collections.sort(answerList);
 
         sb.append(count).append("\n");
-        for(String key : answerList)  {
-            sb.append(key).append("\n");
+        for(String answer : answerList)  {
+            sb.append(answer).append("\n");
         }
 
         System.out.print(sb);
