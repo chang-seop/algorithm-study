@@ -1,8 +1,10 @@
 2
-3
+5
 hat headgear
 sunglasses eyewear
 turban headgear
+set eyewear
+h ww
 3
 mask face
 sunglasses face
