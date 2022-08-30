@@ -99,7 +99,7 @@ public class Test {
         }
     }
 
-    //BU -> Button Up query
+    //BU -> Bottom Up query
     static long queryBU(int queryLeft, int queryRight) {
         // Leaf 에서 left, right 설정
         int left = S + queryLeft - 1;
@@ -121,7 +121,7 @@ public class Test {
         return sum;
     }
 
-    //BU -> Button Up update
+    //BU -> Bottom Up update
     static void updateBU(int target, long value) { // 인덱스 하나만  범위 갱신 X (targetLeft, targetRight)
         //Leaf에서 target을 찾음
         int index = S + target - 1;
