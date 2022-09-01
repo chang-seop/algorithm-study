@@ -1,4 +1,4 @@
-package StudyFiles.NumberTheoryAndCombinatorics.P11051;
+package StudyFiles.Combinatorics.P11051;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Main {
     static int N, K;
     static int[][] dp;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/NumberTheoryAndCombinatorics/P11051/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/Combinatorics/P11051/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());

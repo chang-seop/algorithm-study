@@ -1,4 +1,4 @@
-package StudyFiles.NumberTheoryAndCombinatorics.P2004;
+package StudyFiles.Combinatorics.P2004;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -10,7 +10,7 @@ public class Main {
     static int N, M;
 
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/NumberTheoryAndCombinatorics/P2004/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/Combinatorics/P2004/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
 

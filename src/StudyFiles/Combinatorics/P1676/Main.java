@@ -1,11 +1,11 @@
-package StudyFiles.NumberTheoryAndCombinatorics.P1676;
+package StudyFiles.Combinatorics.P1676;
 
 import java.io.*;
 
 public class Main {
     static int N;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/NumberTheoryAndCombinatorics/P1676/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/Combinatorics/P1676/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
 

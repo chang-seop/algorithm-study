@@ -1,4 +1,4 @@
-package StudyFiles.NumberTheoryAndCombinatorics.P5086;
+package StudyFiles.NumberTheory.P5086;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class Main {
     static int A = -1, B = -1;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/NumberTheoryAndCombinatorics/P5086/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/NumberTheory/P5086/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
 
