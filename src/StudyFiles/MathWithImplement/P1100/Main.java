@@ -1,4 +1,4 @@
-package WorkingTable.P1100;
+package StudyFiles.MathWithImplement.P1100;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -7,7 +7,7 @@ import java.io.InputStreamReader;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/WorkingTable/P1100/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/MathWithImplement/P1100/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         int count = 0;

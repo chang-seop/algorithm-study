@@ -1,4 +1,4 @@
-package WorkingTable.P1644;
+package StudyFiles.TwoPointer.P1644;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -12,7 +12,7 @@ public class Main {
     static int[] primeCompare;
     static List<Integer> primeArray;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/WorkingTable/P1644/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/TwoPointer/P1644/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         N = Integer.parseInt(br.readLine());
 
