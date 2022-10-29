@@ -29,12 +29,13 @@ public class Main {
             } else return a[1] - b[1]; // this last - other last
         });
 
-        int count = 0;
-        int firstTime = timeArray[0][0]; // 가장 적은 시작 시간
-        for (int[] i : timeArray) {
-            if(firstTime <= i[0]) { // 다음 시작 시간이 전 끝나는 시간 보다 크거나 같을 경우
+        int count = 1;
+        int firstTime = timeArray[0][1]; // 가장 적은 끝나는 시간을 먼저 접근 (그리디)
+        for (int i = 1; i < timeArray.length; i++) { // 먼저 접근 했으므로 0 index 건너 띄우기
+            int[] temp = timeArray[i];
+            if(firstTime <= temp[0]) { // 다음 시작 시간이 전 끝나는 시간 보다 크거나 같을 경우
                 count++;
-                firstTime = i[1];
+                firstTime = temp[1];
             }
         }
         System.out.print(count);
