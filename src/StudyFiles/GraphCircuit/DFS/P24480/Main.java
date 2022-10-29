@@ -1,4 +1,4 @@
-package StudyFiles.GraphCircuit.P24480;
+package StudyFiles.GraphCircuit.DFS.P24480;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -15,7 +15,7 @@ public class Main {
     static int idx = 0;
     static int[] answer;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/GraphCircuit/P24480/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/GraphCircuit/DFS/P24480/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());

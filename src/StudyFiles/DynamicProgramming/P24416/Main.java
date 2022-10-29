@@ -17,7 +17,7 @@ public class Main {
         forCount = 0;
         recursionCount = 0;
 
-        // 동적 계획법
+        // 동적 계획법 ( 속도가 더 빠르다 )
         dp[1] = 1;
         for (int i = 2; i < N; i++) {
             dp[i] = dp[i - 1] + dp[i - 2];
@@ -27,6 +27,7 @@ public class Main {
 
         System.out.print(recursionCount + " " + forCount);
     }
+    //재귀 함수
     static int fibo (int n) {
         if(n == 1 || n == 2) {
             recursionCount++;

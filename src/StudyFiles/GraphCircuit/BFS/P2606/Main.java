@@ -1,4 +1,4 @@
-package StudyFiles.GraphCircuit.P2606;
+package StudyFiles.GraphCircuit.BFS.P2606;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -14,7 +14,7 @@ public class Main {
     static boolean[] visited;
     static int[] answer;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/StudyFiles/GraphCircuit/P2606/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/GraphCircuit/BFS/P2606/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st;
         N = Integer.parseInt(br.readLine());
