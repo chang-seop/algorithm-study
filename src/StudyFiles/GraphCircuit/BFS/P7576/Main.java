@@ -1,4 +1,4 @@
-package WorkingTable.P7576;
+package StudyFiles.GraphCircuit.BFS.P7576;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -16,7 +16,7 @@ public class Main {
     static int Y, X;
     static int max = Integer.MIN_VALUE;
     public static void main(String[] args) throws IOException {
-        System.setIn(new FileInputStream("src/WorkingTable/P7576/input.txt"));
+        System.setIn(new FileInputStream("src/StudyFiles/GraphCircuit/BFS/P7576/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
