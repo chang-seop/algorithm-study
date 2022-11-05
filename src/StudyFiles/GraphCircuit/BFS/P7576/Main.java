@@ -51,7 +51,7 @@ public class Main {
 
                 // 맵 안에 들어오는가
                 if(0 <= ty && ty < Y && 0 <= tx && tx < X) {
-                    // map 에 있는 값이 0 일 걍우
+                    // map 에 있는 값이 0 일 경우
                     if(map[ty][tx] == 0) {
                         //체크인
                         map[ty][tx] = 1;
