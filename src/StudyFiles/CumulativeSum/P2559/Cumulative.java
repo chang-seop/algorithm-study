@@ -23,7 +23,6 @@ public class Cumulative {
         }
         // 누적 합
         dp = new int[N + 1];
-        dp[1] = nArray[1];
 
         for (int i = 1; i <= N; i++) {
             dp[i] = dp[i - 1] + nArray[i];
