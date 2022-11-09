@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 public class Main {
     static int N;
     static int[] nArray, dp;
+    static int max = Integer.MIN_VALUE, maxIndex;
     public static void main(String[] args) throws IOException {
         System.setIn(new FileInputStream("src/WorkingTable/P1912/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,28 +19,22 @@ public class Main {
         StringTokenizer st = new StringTokenizer(br.readLine());
         for (int i = 1; i <= N; i++) {
             nArray[i] = Integer.parseInt(st.nextToken());
+            if(max < nArray[i]) {
+                max = nArray[i];
+                maxIndex = i;
+            }
         }
-
+        // 부분 합
         for (int i = 1; i <= N; i++) {
             dp[i] = dp[i - 1] + nArray[i];
         }
+        max = Integer.MIN_VALUE;
 
-        int sum = 0;
-        int max = Integer.MIN_VALUE;
-        int maxValue = Integer.MIN_VALUE;
-        boolean visited = false;
-        for (int i = 0; i <= N - 1; i++) {
-            if(dp[i] < dp[i + 1]) {
-                visited = true;
-                sum += dp[i + 1] - dp[i];
-            } else {
-                maxValue = Math.max(maxValue, dp[i + 1] - dp[i]);
-                sum = 0;
+        for (int i = 0; i < maxIndex; i++) {
+            if(dp[maxIndex] - dp[i] > max) {
+                max = dp[maxIndex] - dp[i];
             }
-            max = Math.max(max, sum);
         }
-
-        if(!visited) System.out.println(maxValue);
-        else System.out.println(max);
+        System.out.print(max);
     }
 }
